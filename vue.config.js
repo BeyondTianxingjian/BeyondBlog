@@ -5,7 +5,7 @@ const resolve = dir => {
 }
 
 module.exports = {
-  publicPath: './',
+  publicPath: './static',
   lintOnSave: true,
   chainWebpack: function (config) {
     config.resolve.alias

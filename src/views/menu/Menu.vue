@@ -43,7 +43,7 @@
 
 <script lang="ts">
 import { mapGetters } from 'vuex'
-import TokenDialog from '@c/dialog/TokenDialog.vue'
+import TokenDialog from '@c/dialog/TokenDialog'
 
 export default {
   name: 'Menu',
@@ -56,7 +56,7 @@ export default {
     },
     insertToken() {
       // TokenDialog;
-      this.$ref.tokenDialog.open()
+      this.$refs.tokenDialog.open()
     }
   },
   computed: {

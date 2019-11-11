@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '@/util/requestUtil'
 import store from '../store/index'
 
 export default {
