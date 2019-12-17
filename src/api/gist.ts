@@ -1,5 +1,6 @@
 import request from '@/util/requestUtil'
 import store from '../store/index'
+
 export default {
   list: function (query) {
     let githubUsername = store.state.configuration.githubUsername
@@ -19,6 +20,7 @@ export default {
       url: '/gists',
       method: 'post',
       data: {
+        'title': form.title,
         'description': form.description,
         'public': true,
         'files': files
@@ -45,4 +47,3 @@ export default {
     })
   }
 }
-// # sourceMappingURL=gist.js.map

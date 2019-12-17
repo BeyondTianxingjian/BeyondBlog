@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{"07c0":function(a,o){h("template",[h("div",{class:"about"},[h("h1",["This is an aboffffffut page"])])])}}]);

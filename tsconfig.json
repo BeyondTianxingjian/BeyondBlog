@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es5",
     "module": "esnext",
     "strict": false,//是否严格模式。 设置成否
     "jsx": "preserve",
@@ -38,6 +38,7 @@
   },
   "include": [
     "node_modules/vue-tsx-support/enable-check.d.ts",
+    "vue-shim.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",

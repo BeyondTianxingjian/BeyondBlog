@@ -3,13 +3,9 @@ import VueRouter from 'vue-router'
 import Error404 from '@v/error/Error404'
 import Home from '@v/home/Home'
 import HotMain from '@v/hot/HotMain'
-
 import BlogList from '@v/blogs/BlogList'
-import BlogDetail from '@v/blogs/BlogDetail'
 import AddBlog from '@v/blogs/AddBlog'
-
 Vue.use(VueRouter)
-
 const routes = [
   {
     path: '/user/hot',
@@ -34,11 +30,6 @@ const routes = [
         meta: { title: '最新动态' }
       },
       {
-        path: 'detail/:id',
-        component: BlogDetail,
-        meta: { title: '最新动态' }
-      },
-      {
         path: 'add',
         component: AddBlog,
         meta: { title: '最新动态' }
@@ -51,7 +42,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '@v/about/About')
+    component: () => import(/* webpackChunkName: "about" */ '@v/about/About ')
   },
   {
     path: '/',
@@ -66,7 +57,6 @@ const routes = [
     redirect: '/404'
   }
 ]
-
 const router = new VueRouter({
   routes: routes,
   scrollBehavior (to, from, savedPosition) {
@@ -75,9 +65,9 @@ const router = new VueRouter({
     }
   }
 })
-
 router.beforeEach((to, from, next) => {
   Vue.prototype.$setTitle(to.meta.title)
   next()
 })
 export default router
+// # sourceMappingURL=index.js.map

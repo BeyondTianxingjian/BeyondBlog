@@ -5,7 +5,7 @@ const resolve = dir => {
 }
 
 module.exports = {
-  publicPath: './static',
+  publicPath: process.env.NODE_ENV === 'production' ? './static' : './',
   lintOnSave: true,
   chainWebpack: function (config) {
     config.resolve.alias
@@ -13,6 +13,8 @@ module.exports = {
       .set('@c', resolve('src/components'))
       .set('@m', resolve('src/mixins'))
       .set('@s', resolve('src/styles'))
+      .set('@v', resolve('src/views'))
+      .set('@u', resolve('src/util'))
       .set('three', resolve('src/three'))
     config.resolve.extensions.add('.js').add('.vue').add('.json').add('.ts').add('.tsx')
   },

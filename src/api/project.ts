@@ -1,5 +1,6 @@
 import request from '@/util/requestUtil'
 import store from '../store/index'
+
 export default {
   getBlogReadme: function () {
     let githubUsername = store.state.configuration.githubUsername
@@ -22,6 +23,7 @@ export default {
       data: {
         'message': 'a',
         'content': require('js-base64').Base64.encode(content),
+
         'sha': sha
       }
     })
@@ -30,6 +32,7 @@ export default {
     let githubUsername = store.state.configuration.githubUsername
     return request({
       url: `/users/${githubUsername}/repos?page=${query.page}&per_page=${query.pageSize}`
+
     })
   },
   single: function (name) {
@@ -50,5 +53,5 @@ export default {
       })
     })
   }
+
 }
-// # sourceMappingURL=project.js.map

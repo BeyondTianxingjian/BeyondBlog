@@ -1,7 +1,6 @@
 const getters = {
-  githubUsername: state => state.configuration.githubUsername,
   token: state => state.tokenStorage.token,
-  firstBlogID: state => state.tokenStorage.firstBlogID,
+  githubUsername: state => state.configuration.githubUsername
   // blogTitle: state => state.configuration.blogTitle,
   // blogDescribe: state => state.configuration.blogDescribe,
   // htmlTitle: state => state.configuration.htmlTitle,
@@ -21,3 +20,4 @@ const getters = {
   // followingTotal: state => state.user.following,
 }
 export default getters
+// # sourceMappingURL=getters.js.map

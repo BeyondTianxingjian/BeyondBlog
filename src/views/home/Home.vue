@@ -5,9 +5,9 @@
   </div>
 </template>
 
-<script>
-import Content from '@/views/content/Content.vue'
-import Menu from '@/views/menu/Menu.vue'
+<script lang="ts">
+import Content from '@v/home/Content'
+import Menu from '@v/menu/Menu'
 
 export default {
   name: 'home',

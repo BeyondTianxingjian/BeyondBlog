@@ -5,6 +5,7 @@
 </template>
 <script lang="ts">
 import { mapGetters } from 'vuex'
+import Menu from '@v/home/Home'
 
 export default {
   name: 'App',
@@ -16,6 +17,9 @@ export default {
   },
   created () {
     this.$store.dispatch('Init')
+  },
+  components: {
+    Menu
   }
 }
 </script>

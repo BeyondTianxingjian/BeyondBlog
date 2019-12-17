@@ -1,21 +1,15 @@
 import UserApi from '@/api/user'
 import store from '@/store/index'
 import Vue from 'vue'
-
 const tokenStorage = {
   state: {
     // 这里是需要绑定的值
-    token: '',//7ec15f3bbf38837518e761554bc68db5ae3356d4
-    firstBlogID:''
+    token: '7ec15f3bbf38837518e761554bc68db5ae3356d4'
   },
   mutations: {
     // 这里提供方法，供外界调用，给state设置值
     SET_TOKEN: (state, value) => {
       state.token = value
-    },
-    // 这里提供方法，供外界调用，给state设置值
-    SET_BLOG_ID: (state, value) => {
-      state.firstBlogID = value
     }
   },
   actions: {
@@ -38,13 +32,9 @@ const tokenStorage = {
           })
         }
       }).catch(() => {
-
       })
-    },
-    SET_BLOG_ID({ commit }, firstBlogID){
-      commit('SET_BLOG_ID', firstBlogID)
     }
   }
 }
-
 export default tokenStorage
+// # sourceMappingURL=tokenStorage.js.map

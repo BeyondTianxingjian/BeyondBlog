@@ -3,14 +3,12 @@ const configuration = {
     githubUsername: '',
     htmlTitle: ''
   },
-
   mutations: {
     SET_CONFIGURATION: (state, configuration) => {
       state.githubUsername = configuration['githubUsername'] || 'GitHub-Laziji'
       state.htmlTitle = configuration['htmlTitle'] || `${state.githubUsername}的博客`
     }
   },
-
   actions: {
     LocalReload ({ commit }, configuration) {
       commit('SET_CONFIGURATION', configuration)
@@ -37,5 +35,5 @@ const configuration = {
     }
   }
 }
-
 export default configuration
+// # sourceMappingURL=configuration.js.map
